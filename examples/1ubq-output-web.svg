@@ -1,0 +1,383 @@
+<?xml version="1.0" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN"
+"http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg width="760" height="40" version="1.1" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+  <linearGradient id="GradCoil" x1="0" x2="0" y1="0" y2="1">
+    <stop offset="0%" stop-color="grey"/>
+    <stop offset="50%" stop-color="white"/>
+    <stop offset="100%" stop-color="grey"/>
+  </linearGradient>
+  <radialGradient id="GradTurn">
+    <stop offset="0%" stop-color="white"/>
+    <stop offset="40%" stop-color="lightcyan"/>
+    <stop offset="100%" stop-color="cyan"/>
+  </radialGradient>
+  <linearGradient id="GradSheet" x1="0" x2="0" y1="0" y2="1">
+    <stop offset="0%" stop-color="gold"/>
+    <stop offset="50%" stop-color="moccasin"/>
+    <stop offset="100%" stop-color="gold"/>
+  </linearGradient>
+  <linearGradient id="GradBridge" x1="0" x2="0" y1="0" y2="1">
+    <stop offset="0%" stop-color="darkkhaki"/>
+    <stop offset="50%" stop-color="tan"/>
+    <stop offset="100%" stop-color="darkkhaki"/>
+  </linearGradient>
+  <linearGradient id="GradHelixUF_H" x1="0" x2="0" y1="0" y2="1">
+    <stop offset="0%" stop-color="red"/>
+    <stop offset="100%" stop-color="orange"/>
+  </linearGradient>
+  <linearGradient id="GradHelixLF_H" x1="0" x2="0" y1="0" y2="1">
+    <stop offset="0%" stop-color="orange"/>
+    <stop offset="100%" stop-color="red"/>
+  </linearGradient>
+  <linearGradient id="GradHelixUB_H" x1="0" x2="0" y1="0" y2="1">
+    <stop offset="0%" stop-color="red"/>
+    <stop offset="100%" stop-color="darkred"/>
+  </linearGradient>
+  <linearGradient id="GradHelixLB_H" x1="0" x2="0" y1="0" y2="1">
+    <stop offset="0%" stop-color="darkred"/>
+    <stop offset="100%" stop-color="red"/>
+  </linearGradient>
+  <linearGradient id="GradHelixFF_H" x1="0" x2="0" y1="0" y2="1">
+    <stop offset="0%" stop-color="red"/>
+    <stop offset="50%" stop-color="orange"/>
+    <stop offset="100%" stop-color="red"/>
+  </linearGradient>
+  <linearGradient id="GradHelixFB_H" x1="0" x2="0" y1="0" y2="1">
+    <stop offset="0%" stop-color="red"/>
+    <stop offset="45%" stop-color="darkred"/>
+    <stop offset="55%" stop-color="darkred"/>
+    <stop offset="100%" stop-color="red"/>
+  </linearGradient>
+  <linearGradient id="GradHelixUF_G" x1="0" x2="0" y1="0" y2="1">
+    <stop offset="0%" stop-color="plum"/>
+    <stop offset="100%" stop-color="pink"/>
+  </linearGradient>
+  <linearGradient id="GradHelixLF_G" x1="0" x2="0" y1="0" y2="1">
+    <stop offset="0%" stop-color="pink"/>
+    <stop offset="100%" stop-color="plum"/>
+  </linearGradient>
+  <linearGradient id="GradHelixUB_G" x1="0" x2="0" y1="0" y2="1">
+    <stop offset="0%" stop-color="plum"/>
+    <stop offset="100%" stop-color="darkmagenta"/>
+  </linearGradient>
+  <linearGradient id="GradHelixLB_G" x1="0" x2="0" y1="0" y2="1">
+    <stop offset="0%" stop-color="darkmagenta"/>
+    <stop offset="100%" stop-color="plum"/>
+  </linearGradient>
+  <linearGradient id="GradHelixFF_G" x1="0" x2="0" y1="0" y2="1">
+    <stop offset="0%" stop-color="plum"/>
+    <stop offset="50%" stop-color="pink"/>
+    <stop offset="100%" stop-color="plum"/>
+  </linearGradient>
+  <linearGradient id="GradHelixFB_G" x1="0" x2="0" y1="0" y2="1">
+    <stop offset="0%" stop-color="plum"/>
+    <stop offset="45%" stop-color="darkmagenta"/>
+    <stop offset="55%" stop-color="darkmagenta"/>
+    <stop offset="100%" stop-color="plum"/>
+  </linearGradient>
+  <linearGradient id="GradHelixUF_I" x1="0" x2="0" y1="0" y2="1">
+    <stop offset="0%" stop-color="purple"/>
+    <stop offset="100%" stop-color="violet"/>
+  </linearGradient>
+  <linearGradient id="GradHelixLF_I" x1="0" x2="0" y1="0" y2="1">
+    <stop offset="0%" stop-color="violet"/>
+    <stop offset="100%" stop-color="purple"/>
+  </linearGradient>
+  <linearGradient id="GradHelixUB_I" x1="0" x2="0" y1="0" y2="1">
+    <stop offset="0%" stop-color="purple"/>
+    <stop offset="100%" stop-color="indigo"/>
+  </linearGradient>
+  <linearGradient id="GradHelixLB_I" x1="0" x2="0" y1="0" y2="1">
+    <stop offset="0%" stop-color="indigo"/>
+    <stop offset="100%" stop-color="purple"/>
+  </linearGradient>
+  <linearGradient id="GradHelixFF_I" x1="0" x2="0" y1="0" y2="1">
+    <stop offset="0%" stop-color="purple"/>
+    <stop offset="50%" stop-color="violet"/>
+    <stop offset="100%" stop-color="purple"/>
+  </linearGradient>
+  <linearGradient id="GradHelixFB_I" x1="0" x2="0" y1="0" y2="1">
+    <stop offset="0%" stop-color="purple"/>
+    <stop offset="45%" stop-color="indigo"/>
+    <stop offset="55%" stop-color="indigo"/>
+    <stop offset="100%" stop-color="purple"/>
+  </linearGradient>
+  </defs>
+  <path d="M 0,17 h 10 v 6 h -10 z"
+    style="fill:url(#GradCoil)" />
+  <path d="M 0,17 h 10"
+    style="stroke:#000000;stroke-width:1;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1" />
+  <path d="M 0,23 h 10"
+    style="stroke:#000000;stroke-width:1;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1" />
+  <path d="M 10,17 h 3 v 6 h -3 z"
+    style="fill:url(#GradCoil)" />
+  <path d="M 10,17 h 3"
+    style="stroke:#000000;stroke-width:1;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1" />
+  <path d="M 10,23 h 3"
+    style="stroke:#000000;stroke-width:1;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1" />
+  <path d="M 67,17 h 3 v 6 h -3 z"
+    style="fill:url(#GradCoil)" />
+  <path d="M 67,17 h 3"
+    style="stroke:#000000;stroke-width:1;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1" />
+  <path d="M 67,23 h 3"
+    style="stroke:#000000;stroke-width:1;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1" />
+  <path d="M 13,17 l 7,-6 h 40 v -6 l 7,12 
+    v 6 l -7,12 v -6 h -40 l -7,-6 z"
+    style="fill:url(#GradSheet);stroke:#000000;stroke-width:1;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1" />
+  <path d="M 70,17 h 2 v 6 h -2"
+    style="fill:url(#GradCoil);stroke:#000000;stroke-width:1;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1" />
+  <path d="M 72,17 a 12,7.5 0 0 1 16,0 v 6 a 12,7.5 0 0 1 -16,0 z"
+style="fill:url(#GradTurn);stroke:#000000;stroke-width:1;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1" />
+  <path d="M 90,17 h -2 v 6 h 2"
+    style="fill:url(#GradCoil);stroke:#000000;stroke-width:1;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1" />
+  <path d="M 90,17 h 10 v 6 h -10 z"
+    style="fill:url(#GradCoil)" />
+  <path d="M 90,17 h 10"
+    style="stroke:#000000;stroke-width:1;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1" />
+  <path d="M 90,23 h 10"
+    style="stroke:#000000;stroke-width:1;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1" />
+  <path d="M 100,17 h 10 v 6 h -10 z"
+    style="fill:url(#GradCoil)" />
+  <path d="M 100,17 h 10"
+    style="stroke:#000000;stroke-width:1;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1" />
+  <path d="M 100,23 h 10"
+    style="stroke:#000000;stroke-width:1;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1" />
+  <path d="M 110,17 h 3 v 6 h -3 z"
+    style="fill:url(#GradCoil)" />
+  <path d="M 110,17 h 3"
+    style="stroke:#000000;stroke-width:1;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1" />
+  <path d="M 110,23 h 3"
+    style="stroke:#000000;stroke-width:1;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1" />
+  <path d="M 157,17 h 3 v 6 h -3 z"
+    style="fill:url(#GradCoil)" />
+  <path d="M 157,17 h 3"
+    style="stroke:#000000;stroke-width:1;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1" />
+  <path d="M 157,23 h 3"
+    style="stroke:#000000;stroke-width:1;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1" />
+  <path d="M 113,17 l 7,-6 h 30 v -6 l 7,12 
+    v 6 l -7,12 v -6 h -30 l -7,-6 z"
+    style="fill:url(#GradSheet);stroke:#000000;stroke-width:1;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1" />
+  <path d="M 160,17 h 20 v 6 h -20 z"
+    style="fill:url(#GradCoil)" />
+  <path d="M 160,17 h 20"
+    style="stroke:#000000;stroke-width:1;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1" />
+  <path d="M 160,23 h 20"
+    style="stroke:#000000;stroke-width:1;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1" />
+  <path d="M 180,17 h 2 v 6 h -2"
+    style="fill:url(#GradCoil);stroke:#000000;stroke-width:1;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1" />
+  <path d="M 182,17 a 12,7.5 0 0 1 16,0 v 6 a 12,7.5 0 0 1 -16,0 z"
+style="fill:url(#GradTurn);stroke:#000000;stroke-width:1;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1" />
+  <path d="M 200,17 h -2 v 6 h 2"
+    style="fill:url(#GradCoil);stroke:#000000;stroke-width:1;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1" />
+  <path d="M 200,17 h 10 v 6 h -10 z"
+    style="fill:url(#GradCoil)" />
+  <path d="M 200,17 h 10"
+    style="stroke:#000000;stroke-width:1;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1" />
+  <path d="M 200,23 h 10"
+    style="stroke:#000000;stroke-width:1;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1" />
+  <path d="M 210,17 h 2 v 6 h -2 z"
+    style="fill:url(#GradCoil)" />
+  <path d="M 210,17 h 2"
+    style="stroke:#000000;stroke-width:1;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1" />
+  <path d="M 210,23 h 2"
+    style="stroke:#000000;stroke-width:1;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1" />
+  <path d="M 212,17 l 3,-6 v -6 l 3,12 
+    v 6 l -3,12 v -6 l -3,-6 z"
+    style="fill:url(#GradBridge);stroke:#000000;stroke-width:1;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1" />
+  <path d="M 218,17 h 2 v 6 h -2 z"
+    style="fill:url(#GradCoil)" />
+  <path d="M 218,17 h 2"
+    style="stroke:#000000;stroke-width:1;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1" />
+  <path d="M 218,23 h 2"
+    style="stroke:#000000;stroke-width:1;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1" />
+  <path d="M 220,17 h 7 l 6,6 h -13"
+    style="fill:url(#GradCoil);stroke:#000000;stroke-width:1;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1" />
+  <path d="M 340,17 h -13 l 6,6 h 7"
+    style="fill:url(#GradCoil);stroke:#000000;stroke-width:1;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1" />
+<path d="M 229.167,29 c 3.33099,0 6.24883,-4.5 9.16667,-9 2.91784,-4.5, 5.83568,-9 9.16667,-9 h 10 c -3.33099,0 -6.24883,4.5 -9.16667,9 -2.91784,4.5, -5.83568,9 -9.16667,9 z"
+style="fill:url(#GradHelixFB_H);stroke:#000000;stroke-width:1;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1" />
+<path d="M 265.833,29 c 3.33099,0 6.24883,-4.5 9.16667,-9 2.91784,-4.5, 5.83568,-9 9.16667,-9 h 10 c -3.33099,0 -6.24883,4.5 -9.16667,9 -2.91784,4.5, -5.83568,9 -9.16667,9 z"
+style="fill:url(#GradHelixFB_H);stroke:#000000;stroke-width:1;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1" />
+<path d="M 302.5,29 c 3.33099,0 6.24883,-4.5 9.16667,-9 2.91784,-4.5, 5.83568,-9 9.16667,-9 h 10 c -3.33099,0 -6.24883,4.5 -9.16667,9 -2.91784,4.5, -5.83568,9 -9.16667,9 z"
+style="fill:url(#GradHelixFB_H);stroke:#000000;stroke-width:1;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1" />
+<path d="M 247.5,5 c 3.33099,0 6.24883,7.5 9.16667,15 2.91784,7.5, 5.83568,15 9.16667,15 h 10 c -3.33099,0 -6.24883,-7.5 -9.16667,-15 -2.91784,-7.5, -5.83568,-15 -9.16667,-15 z"
+style="fill:url(#GradHelixFF_H);stroke:#000000;stroke-width:1;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1" />
+<path d="M 284.167,5 c 3.33099,0 6.24883,7.5 9.16667,15 2.91784,7.5, 5.83568,15 9.16667,15 h 10 c -3.33099,0 -6.24883,-7.5 -9.16667,-15 -2.91784,-7.5, -5.83568,-15 -9.16667,-15 z"
+style="fill:url(#GradHelixFF_H);stroke:#000000;stroke-width:1;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1" />
+<path d="M 220,20 c 2.91784,7.5 5.83568,15 9.16667,15 h 10 c -3.33099,0 -6.24883,-7.5 -9.16667,-15 z"
+style="fill:url(#GradHelixLF_H);stroke:#000000;stroke-width:1;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1" />
+<path d="M 330,20 c -2.91784,-7.5 -5.83568,-15 -9.16667,-15 h 10 c 3.33099,0 6.24883,7.5 9.16667,15 z"
+style="fill:url(#GradHelixUF_H);stroke:#000000;stroke-width:1;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1" />
+<path d="M 230,20 c 2.91784,7.5 5.83568,15 9.16667,15 3.33099,0 6.24883,-7.5 9.16667,-15 c -2.91784,4.5 -5.83568,9 -9.16667,9 -3.33099,0 -6.24883,-4.5, -9.16667,-9 z"
+style="fill:url(#GradHelixLF_H);stroke:#000000;stroke-width:1;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1" />
+<path d="M 238.333,20 c 2.91784,-7.5 5.83568,-15 9.16667,-15 3.33099,0 6.24883,7.5 9.16667,15 c -2.91784,-4.5 -5.83568,-9 -9.16667,-9 -3.33099,0 -6.24883,4.5, -9.16667,9 z"
+style="fill:url(#GradHelixUF_H);stroke:#000000;stroke-width:1;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1" />
+<path d="M 266.667,20 c 2.91784,7.5 5.83568,15 9.16667,15 3.33099,0 6.24883,-7.5 9.16667,-15 c -2.91784,4.5 -5.83568,9 -9.16667,9 -3.33099,0 -6.24883,-4.5, -9.16667,-9 z"
+style="fill:url(#GradHelixLF_H);stroke:#000000;stroke-width:1;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1" />
+<path d="M 275,20 c 2.91784,-7.5 5.83568,-15 9.16667,-15 3.33099,0 6.24883,7.5 9.16667,15 c -2.91784,-4.5 -5.83568,-9 -9.16667,-9 -3.33099,0 -6.24883,4.5, -9.16667,9 z"
+style="fill:url(#GradHelixUF_H);stroke:#000000;stroke-width:1;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1" />
+<path d="M 303.333,20 c 2.91784,7.5 5.83568,15 9.16667,15 3.33099,0 6.24883,-7.5 9.16667,-15 c -2.91784,4.5 -5.83568,9 -9.16667,9 -3.33099,0 -6.24883,-4.5, -9.16667,-9 z"
+style="fill:url(#GradHelixLF_H);stroke:#000000;stroke-width:1;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1" />
+<path d="M 311.667,20 c 2.91784,-7.5 5.83568,-15 9.16667,-15 3.33099,0 6.24883,7.5 9.16667,15 c -2.91784,-4.5 -5.83568,-9 -9.16667,-9 -3.33099,0 -6.24883,4.5, -9.16667,9 z"
+style="fill:url(#GradHelixUF_H);stroke:#000000;stroke-width:1;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1" />
+  <path d="M 340,17 h 30 v 6 h -30 z"
+    style="fill:url(#GradCoil)" />
+  <path d="M 340,17 h 30"
+    style="stroke:#000000;stroke-width:1;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1" />
+  <path d="M 340,23 h 30"
+    style="stroke:#000000;stroke-width:1;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1" />
+  <path d="M 370,17 h 7 l 6,6 h -13"
+    style="fill:url(#GradCoil);stroke:#000000;stroke-width:1;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1" />
+  <path d="M 400,17 h -7 l -6,6 h 13"
+    style="fill:url(#GradCoil);stroke:#000000;stroke-width:1;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1" />
+<path d="M 390,20 c -3.1831,4.05 -6.3662,8.1 -10,8.1 h 10 c 3.6338,0 6.8169,-4.05 10,-8.1 z"
+style="fill:url(#GradHelixLB_G);stroke:#000000;stroke-width:1;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1" />
+<path d="M 370,20 c 3.1831,6.75 6.3662,13.5 10,13.5 h 10 c -3.6338,0 -6.8169,-6.75 -10,-13.5 z"
+style="fill:url(#GradHelixLF_G);stroke:#000000;stroke-width:1;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1" />
+<path d="M 380,20 c 3.1831,6.75 6.3662,13.5 10,13.5 3.6338,0 6.8169,-6.75 10,-13.5 c -3.1831,4.05 -6.3662,8.1 -10,8.1 -3.6338,0 -6.8169,-4.05, -10,-8.1 z"
+style="fill:url(#GradHelixLF_G);stroke:#000000;stroke-width:1;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1" />
+  <path d="M 400,17 h 3 v 6 h -3 z"
+    style="fill:url(#GradCoil)" />
+  <path d="M 400,17 h 3"
+    style="stroke:#000000;stroke-width:1;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1" />
+  <path d="M 400,23 h 3"
+    style="stroke:#000000;stroke-width:1;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1" />
+  <path d="M 447,17 h 3 v 6 h -3 z"
+    style="fill:url(#GradCoil)" />
+  <path d="M 447,17 h 3"
+    style="stroke:#000000;stroke-width:1;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1" />
+  <path d="M 447,23 h 3"
+    style="stroke:#000000;stroke-width:1;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1" />
+  <path d="M 403,17 l 7,-6 h 30 v -6 l 7,12 
+    v 6 l -7,12 v -6 h -30 l -7,-6 z"
+    style="fill:url(#GradSheet);stroke:#000000;stroke-width:1;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1" />
+  <path d="M 450,17 h 2 v 6 h -2"
+    style="fill:url(#GradCoil);stroke:#000000;stroke-width:1;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1" />
+  <path d="M 452,17 a 12,7.5 0 0 1 16,0 v 6 a 12,7.5 0 0 1 -16,0 z"
+style="fill:url(#GradTurn);stroke:#000000;stroke-width:1;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1" />
+  <path d="M 470,17 h -2 v 6 h 2"
+    style="fill:url(#GradCoil);stroke:#000000;stroke-width:1;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1" />
+  <path d="M 470,17 h 3 v 6 h -3 z"
+    style="fill:url(#GradCoil)" />
+  <path d="M 470,17 h 3"
+    style="stroke:#000000;stroke-width:1;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1" />
+  <path d="M 470,23 h 3"
+    style="stroke:#000000;stroke-width:1;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1" />
+  <path d="M 487,17 h 3 v 6 h -3 z"
+    style="fill:url(#GradCoil)" />
+  <path d="M 487,17 h 3"
+    style="stroke:#000000;stroke-width:1;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1" />
+  <path d="M 487,23 h 3"
+    style="stroke:#000000;stroke-width:1;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1" />
+  <path d="M 473,17 l 7,-6 h 0 v -6 l 7,12 
+    v 6 l -7,12 v -6 h 0 l -7,-6 z"
+    style="fill:url(#GradSheet);stroke:#000000;stroke-width:1;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1" />
+  <path d="M 490,17 h 20 v 6 h -20 z"
+    style="fill:url(#GradCoil)" />
+  <path d="M 490,17 h 20"
+    style="stroke:#000000;stroke-width:1;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1" />
+  <path d="M 490,23 h 20"
+    style="stroke:#000000;stroke-width:1;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1" />
+  <path d="M 510,17 h 2 v 6 h -2"
+    style="fill:url(#GradCoil);stroke:#000000;stroke-width:1;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1" />
+  <path d="M 512,17 a 12,7.5 0 0 1 16,0 v 6 a 12,7.5 0 0 1 -16,0 z"
+style="fill:url(#GradTurn);stroke:#000000;stroke-width:1;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1" />
+  <path d="M 530,17 h -2 v 6 h 2"
+    style="fill:url(#GradCoil);stroke:#000000;stroke-width:1;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1" />
+  <path d="M 530,17 h 10 v 6 h -10 z"
+    style="fill:url(#GradCoil)" />
+  <path d="M 530,17 h 10"
+    style="stroke:#000000;stroke-width:1;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1" />
+  <path d="M 530,23 h 10"
+    style="stroke:#000000;stroke-width:1;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1" />
+  <path d="M 540,17 h 2 v 6 h -2 z"
+    style="fill:url(#GradCoil)" />
+  <path d="M 540,17 h 2"
+    style="stroke:#000000;stroke-width:1;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1" />
+  <path d="M 540,23 h 2"
+    style="stroke:#000000;stroke-width:1;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1" />
+  <path d="M 542,17 l 3,-6 v -6 l 3,12 
+    v 6 l -3,12 v -6 l -3,-6 z"
+    style="fill:url(#GradBridge);stroke:#000000;stroke-width:1;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1" />
+  <path d="M 548,17 h 2 v 6 h -2 z"
+    style="fill:url(#GradCoil)" />
+  <path d="M 548,17 h 2"
+    style="stroke:#000000;stroke-width:1;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1" />
+  <path d="M 548,23 h 2"
+    style="stroke:#000000;stroke-width:1;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1" />
+  <path d="M 550,17 h 2 v 6 h -2"
+    style="fill:url(#GradCoil);stroke:#000000;stroke-width:1;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1" />
+  <path d="M 552,17 a 4.5,7.5 0 0 1 6,0 v 6 a 4.5,7.5 0 0 1 -6,0 z"
+style="fill:url(#GradTurn);stroke:#000000;stroke-width:1;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1" />
+  <path d="M 560,17 h -2 v 6 h 2"
+    style="fill:url(#GradCoil);stroke:#000000;stroke-width:1;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1" />
+  <path d="M 560,17 h 7 l 6,6 h -13"
+    style="fill:url(#GradCoil);stroke:#000000;stroke-width:1;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1" />
+  <path d="M 590,17 h -7 l -6,6 h 13"
+    style="fill:url(#GradCoil);stroke:#000000;stroke-width:1;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1" />
+<path d="M 580,20 c -3.1831,4.05 -6.3662,8.1 -10,8.1 h 10 c 3.6338,0 6.8169,-4.05 10,-8.1 z"
+style="fill:url(#GradHelixLB_G);stroke:#000000;stroke-width:1;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1" />
+<path d="M 560,20 c 3.1831,6.75 6.3662,13.5 10,13.5 h 10 c -3.6338,0 -6.8169,-6.75 -10,-13.5 z"
+style="fill:url(#GradHelixLF_G);stroke:#000000;stroke-width:1;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1" />
+<path d="M 570,20 c 3.1831,6.75 6.3662,13.5 10,13.5 3.6338,0 6.8169,-6.75 10,-13.5 c -3.1831,4.05 -6.3662,8.1 -10,8.1 -3.6338,0 -6.8169,-4.05, -10,-8.1 z"
+style="fill:url(#GradHelixLF_G);stroke:#000000;stroke-width:1;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1" />
+  <path d="M 590,17 h 2 v 6 h -2"
+    style="fill:url(#GradCoil);stroke:#000000;stroke-width:1;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1" />
+  <path d="M 592,17 a 4.5,7.5 0 0 1 6,0 v 6 a 4.5,7.5 0 0 1 -6,0 z"
+style="fill:url(#GradTurn);stroke:#000000;stroke-width:1;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1" />
+  <path d="M 600,17 h -2 v 6 h 2"
+    style="fill:url(#GradCoil);stroke:#000000;stroke-width:1;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1" />
+  <path d="M 600,17 h 20 v 6 h -20 z"
+    style="fill:url(#GradCoil)" />
+  <path d="M 600,17 h 20"
+    style="stroke:#000000;stroke-width:1;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1" />
+  <path d="M 600,23 h 20"
+    style="stroke:#000000;stroke-width:1;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1" />
+  <path d="M 620,17 h 2 v 6 h -2"
+    style="fill:url(#GradCoil);stroke:#000000;stroke-width:1;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1" />
+  <path d="M 622,17 a 12,7.5 0 0 1 16,0 v 6 a 12,7.5 0 0 1 -16,0 z"
+style="fill:url(#GradTurn);stroke:#000000;stroke-width:1;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1" />
+  <path d="M 640,17 h -2 v 6 h 2"
+    style="fill:url(#GradCoil);stroke:#000000;stroke-width:1;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1" />
+  <path d="M 640,17 h 10 v 6 h -10 z"
+    style="fill:url(#GradCoil)" />
+  <path d="M 640,17 h 10"
+    style="stroke:#000000;stroke-width:1;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1" />
+  <path d="M 640,23 h 10"
+    style="stroke:#000000;stroke-width:1;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1" />
+  <path d="M 650,17 h 3 v 6 h -3 z"
+    style="fill:url(#GradCoil)" />
+  <path d="M 650,17 h 3"
+    style="stroke:#000000;stroke-width:1;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1" />
+  <path d="M 650,23 h 3"
+    style="stroke:#000000;stroke-width:1;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1" />
+  <path d="M 707,17 h 3 v 6 h -3 z"
+    style="fill:url(#GradCoil)" />
+  <path d="M 707,17 h 3"
+    style="stroke:#000000;stroke-width:1;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1" />
+  <path d="M 707,23 h 3"
+    style="stroke:#000000;stroke-width:1;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1" />
+  <path d="M 653,17 l 7,-6 h 40 v -6 l 7,12 
+    v 6 l -7,12 v -6 h -40 l -7,-6 z"
+    style="fill:url(#GradSheet);stroke:#000000;stroke-width:1;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1" />
+  <path d="M 710,17 h 20 v 6 h -20 z"
+    style="fill:url(#GradCoil)" />
+  <path d="M 710,17 h 20"
+    style="stroke:#000000;stroke-width:1;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1" />
+  <path d="M 710,23 h 20"
+    style="stroke:#000000;stroke-width:1;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1" />
+  <path d="M 730,17 h 10 v 6 h -10 z"
+    style="fill:url(#GradCoil)" />
+  <path d="M 730,17 h 10"
+    style="stroke:#000000;stroke-width:1;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1" />
+  <path d="M 730,23 h 10"
+    style="stroke:#000000;stroke-width:1;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1" />
+  <path d="M 740,17 h 20 v 6 h -20 z"
+    style="fill:url(#GradCoil)" />
+  <path d="M 740,17 h 20"
+    style="stroke:#000000;stroke-width:1;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1" />
+  <path d="M 740,23 h 20"
+    style="stroke:#000000;stroke-width:1;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1" />
+</svg>

@@ -104,52 +104,55 @@ def print_defines(fp):
     print >> fp, '  </defs>'
 
 def print_svgheader(fp, width, height):
-    print >> fp, '<svg width="%g" height="%g" version="1.1">' % (width, height)
+    print >> fp, '<?xml version="1.0" standalone="no"?>'
+    print >> fp, '<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN"'
+    print >> fp, '"http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">'
+    print >> fp, '<svg width="%g" height="%g" version="1.1" xmlns="http://www.w3.org/2000/svg">' % (width, height)
 
 def print_svgfooter(fp):
     print >> fp, '</svg>'
 
-def draw_coil(fp, xinit, length, thickness=15):
+def draw_coil(fp, xinit, length, thickness=15, linewidth=5):
     w=length ; th=thickness
     box=[ [ xinit[0],xinit[1]-th],[xinit[0]+w, xinit[1]+th] ]
     print >> fp, '  <path d="M %g,%g h %g v %g h %g z"' % ( xinit[0], xinit[1]-th, w, 2*th, -w)
     print >> fp, '    style="fill:url(#GradCoil)" />'
     print >> fp, '  <path d="M %g,%g h %g"' % ( xinit[0], xinit[1]-th, w )
-    print >> fp, '    style="stroke:#000000;stroke-width:5px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1" />'
+    print >> fp, '    style="stroke:#000000;stroke-width:%g;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1" />' % lw
     print >> fp, '  <path d="M %g,%g h %g"' % ( xinit[0], xinit[1]+th, w )
-    print >> fp, '    style="stroke:#000000;stroke-width:5px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1" />'
+    print >> fp, '    style="stroke:#000000;stroke-width:%g;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1" />' % lw
 
-def draw_sheet(fp, x_init, width=100, nres=4, thickness=15):
+def draw_sheet(fp, x_init, width=100, nres=4, thickness=15, linewidth=5):
     w=width ;  th=thickness ; gap=0.3 ; omgap=1.0-gap
     draw_coil(fp, x_init, gap*w, th)
     draw_coil(fp, [x_init[0]+w*(nres-gap), x_init[1]], gap*w, th)
     print >> fp, '  <path d="M %g,%g l %g,%g h %g v %g l %g,%g ' % ( x_init[0]+gap*w, x_init[1]-th, omgap*w, -2.0*th, w*(nres-2), -2.0*th, omgap*w, 4.0*th)
     print >> fp, '    v %g l %g,%g v %g h %g l %g,%g z"' % ( 2.0*th, -omgap*w, 4.0*th, -2.0*th, w*(2-nres), -1*omgap*w, -2.0*th)
-    print >> fp, '    style="fill:url(#GradSheet);stroke:#000000;stroke-width:5px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1" />'
+    print >> fp, '    style="fill:url(#GradSheet);stroke:#000000;stroke-width:%g;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1" />' % lw
 
-def draw_bridge(fp, x_init, width=100, thickness=15):
+def draw_bridge(fp, x_init, width=100, thickness=15, linewidth=5):
     w=width ; th=thickness ; gap=0.2 ; omgap=1.0-gap ; hmgap=0.5-gap
     draw_coil(fp, x_init, gap*w, th)
     print >> fp, '  <path d="M %g,%g l %g,%g v %g l %g,%g ' % ( x_init[0]+gap*w, x_init[1]-th, hmgap*w, -2.0*th, -2.0*th, hmgap*w, 4.0*th)
     print >> fp, '    v %g l %g,%g v %g l %g,%g z"' % ( 2.0*th, -1*hmgap*w, 4.0*th, -2.0*th, -1*hmgap*w, -2.0*th)
-    print >> fp, '    style="fill:url(#GradBridge);stroke:#000000;stroke-width:5px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1" />'
+    print >> fp, '    style="fill:url(#GradBridge);stroke:#000000;stroke-width:%g;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1" />' % lw
     draw_coil(fp, [x_init[0]+w*omgap, x_init[1]], gap*w, th)
 
-def draw_turn(fp, x_init, width=100, nres=4, thickness=15):
+def draw_turn(fp, x_init, width=100, nres=4, thickness=15, linewidth=5):
     w=width
     th=thickness
     gap=0.2 ; dgap=2.0*gap
     print >> fp, '  <path d="M %g,%g h %g v %g h %g"' % (x_init[0], x_init[1]-th, gap*w, 2*th, -1*gap*w)
-    print >> fp, '    style="fill:url(#GradCoil);stroke:#000000;stroke-width:5px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1" />'
+    print >> fp, '    style="fill:url(#GradCoil);stroke:#000000;stroke-width:%g;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1" />' % lw
     print >> fp, '  <path d="M %g,%g a %g,%g %i %i %i %g,%g v %g a %g,%g %i %i %i %g,%g z"' % (
                   x_init[0]+gap*w, x_init[1]-th, 0.75*w*(nres-dgap), 2.5*th, 0, 0, 1, w*(nres-gap*2), 0.0,
                   2*th, 0.75*w*(nres-dgap), 2.5*th, 0, 0, 1, w*(dgap-nres), 0.0)
-    print >> fp, 'style="fill:url(#GradTurn);stroke:#000000;stroke-width:5px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1" />'
+    print >> fp, 'style="fill:url(#GradTurn);stroke:#000000;stroke-width:%g;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1" />' % lw
     print >> fp, '  <path d="M %g,%g h %g v %g h %g"' % (x_init[0]+w*nres, x_init[1]-th, -1*gap*w, 2*th, gap*w)
-    print >> fp, '    style="fill:url(#GradCoil);stroke:#000000;stroke-width:5px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1" />'
+    print >> fp, '    style="fill:url(#GradCoil);stroke:#000000;stroke-width:%g;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1" />' % lw
 
 # Define only right handed helix for now.
-def draw_helix(fp, x_init, width=100, nres=4, thickness=15, htype='H'):
+def draw_helix(fp, x_init, width=100, nres=4, thickness=15, htype='H', linewidth=5):
     """
     This is the most complicated draw-call in the script. First, the helix must be analysed so as to scale it to the nearest half-turn.
     Then we print in the following order:
@@ -176,13 +179,13 @@ def draw_helix(fp, x_init, width=100, nres=4, thickness=15, htype='H'):
 
     #Layer-0, Connecting tubes
     print >> fp, '  <path d="M %g,%g h %g l %g,%g h %g"' % (x_init[0], x_init[1]-th, w-th, 2*th, 2*th, -1*(w+th))
-    print >> fp, '    style="fill:url(#GradCoil);stroke:#000000;stroke-width:5px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1" />'
+    print >> fp, '    style="fill:url(#GradCoil);stroke:#000000;stroke-width:%g;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1" />' % lw
     if halfturns%2==0:
         print >> fp, '  <path d="M %g,%g h %g l %g,%g h %g"' % (x_init[0]+nres*w, x_init[1]-th, -1*(th+w), 2*th, 2*th, w-th)
-        print >> fp, '    style="fill:url(#GradCoil);stroke:#000000;stroke-width:5px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1" />'
+        print >> fp, '    style="fill:url(#GradCoil);stroke:#000000;stroke-width:%g;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1" />' % lw
     else:
         print >> fp, '  <path d="M %g,%g h %g l %g,%g h %g"' % (x_init[0]+nres*w, x_init[1]-th, th-w, -2*th, 2*th, w+th)
-        print >> fp, '    style="fill:url(#GradCoil);stroke:#000000;stroke-width:5px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1" />'
+        print >> fp, '    style="fill:url(#GradCoil);stroke:#000000;stroke-width:%g;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1" />' % lw
 
     #Layer-1, full back-twist
     for i in range(1, halfturns, 2):
@@ -191,7 +194,7 @@ def draw_helix(fp, x_init, width=100, nres=4, thickness=15, htype='H'):
         #print "...Debug back:", i, x0
         ostr=motif._hsine( [ x0, x_init[1]], xfact=xfact, yfact=yfact)
         print >> fp, '<path %s' % ostr
-        print >> fp, 'style="fill:url(#GradHelixFB_%s);stroke:#000000;stroke-width:5px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1" />' % ( htype )
+        print >> fp, 'style="fill:url(#GradHelixFB_%s);stroke:#000000;stroke-width:%g;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1" />' % ( htype, lw )
 
     # Last twist for half turns.
     if halfturns%2==1:
@@ -199,7 +202,7 @@ def draw_helix(fp, x_init, width=100, nres=4, thickness=15, htype='H'):
         x0=x_init[0]+(2*halfturns-2)*xfact*w
         ostr=motif._qsine( [ x0, x_init[1]], xfact=-1*xfact, yfact=yfact)
         print >> fp, '<path %s' % ostr
-        print >> fp, 'style="fill:url(#GradHelixLB_%s);stroke:#000000;stroke-width:5px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1" />' % ( htype )
+        print >> fp, 'style="fill:url(#GradHelixLB_%s);stroke:#000000;stroke-width:%g;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1" />' % ( htype , lw )
 
     # Layer=2, full front-twist
     for i in range(3, halfturns+1, 2):
@@ -208,18 +211,18 @@ def draw_helix(fp, x_init, width=100, nres=4, thickness=15, htype='H'):
         # print "...Debug front:", i, x0
         ostr=motif._hsine( [ x0, x_init[1]], xfact=xfact, yfact=yfact)
         print >> fp, '<path %s' % ostr
-        print >> fp, 'style="fill:url(#GradHelixFF_%s);stroke:#000000;stroke-width:5px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1" />' % ( htype )
+        print >> fp, 'style="fill:url(#GradHelixFF_%s);stroke:#000000;stroke-width:%g;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1" />' % ( htype, lw )
 
     # First twist.
     ostr=motif._qsine( x_init, xfact=xfact)
     print >> fp, '<path %s' % ostr
-    print >> fp, 'style="fill:url(#GradHelixLF_%s);stroke:#000000;stroke-width:5px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1" />' % ( htype )
+    print >> fp, 'style="fill:url(#GradHelixLF_%s);stroke:#000000;stroke-width:%g;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1" />' % ( htype, lw )
     # Last twist for full turns.
     if halfturns%2==0:
         x0=x_init[0]+w*(nres-2-xfact)
         ostr=motif._qsine( [ x0, x_init[1]], xfact=-1*xfact, yfact=-1.0)
         print >> fp, '<path %s' % ostr
-        print >> fp, 'style="fill:url(#GradHelixUF_%s);stroke:#000000;stroke-width:5px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1" />' % ( htype )
+        print >> fp, 'style="fill:url(#GradHelixUF_%s);stroke:#000000;stroke-width:%g;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1" />' % ( htype, lw )
 
     # Layer-3 thickness mods.
     for i in range(halfturns):
@@ -231,7 +234,7 @@ def draw_helix(fp, x_init, width=100, nres=4, thickness=15, htype='H'):
             yfact=1.0 ; lett='L'
         ostr=motif._crescent( [ x0, x_init[1]], xfact=xfact, yfact=yfact, yscale=yscale)
         print >> fp, '<path %s' % ostr
-        print >> fp, 'style="fill:url(#GradHelix%sF_%s);stroke:#000000;stroke-width:5px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1" />' % ( lett, htype )
+        print >> fp, 'style="fill:url(#GradHelix%sF_%s);stroke:#000000;stroke-width:%g;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1" />' % ( lett, htype, lw )
 
 # = = = = = Mundane operations like file I/O.
 
@@ -289,8 +292,7 @@ scriptname=os.path.basename(__file__)
 parser = argparse.ArgumentParser(description='Secondary-structure SVG Drawer. Takes as input one of several kinds of '
                                              'file formats, and extracts just the secondary-structure signature from this. '
                                              'Uses the DSSP-naming conventions as a basis for calculating, except "S" '
-                                             'bends, which are resovled to coil.'
-                                             'Notes: the black-outline is currently fixed to 5px. '
+                                             'bends, which are resolved to coil.'
                                              'Also, if one desires PDF output, one way on linux is to run the following: '
                                              '"rsvg-convert -f pdf -o $i.pdf $i.svg" '
                                              'Copyright-2017 Poker Chen, until I release it on Github or something.',
@@ -303,18 +305,25 @@ parser.add_argument('-f', '--fasta', type=str, dest='in_fasta', default='',
                          'not begin with ">".')
 parser.add_argument('-o', '--out', type=str, dest='ofile', default='output.svg',
                     help='Output .svg file containing the scalable vector graphics.')
-parser.add_argument('--width', type=float, default=100,
+parser.add_argument('-s','--scale',type=float,default=1.0,
+                    help='Overall scale of the output image, multiplying all indiviudal values below.')
+parser.add_argument('-w','--width', type=float, default=100,
                     help='Unitless width of the structure taken up by each residue. Total width of the image will be Nres*w.')
-parser.add_argument('--height', type=float, default=200,
+parser.add_argument('-l','--height', type=float, default=200,
                     help='Unitless height of the output image.')
-parser.add_argument('--thickness', type=float, default=15,
+parser.add_argument('-t','--thickness', type=float, default=15,
                     help='Unitless thickness of the backbone-strand. This is used to determine the perpendicular size of'
                          'structure features. E.g., a helix will be ~5*th wide.' )
+parser.add_argument('-lw', '--linewidth', type=float, default=5,
+                    help='Width of borders around all graphical elements.')
+
 
 args = parser.parse_args()
-width=args.width
-height=args.height
-th=args.thickness
+width=args.width*args.scale
+height=args.height*args.scale
+th=args.thickness*args.scale
+lw=args.linewidth*args.scale
+
 outfile=args.ofile
 if args.in_dssp != '':
     ss = read_dssp(args.in_dssp)
@@ -341,20 +350,20 @@ for i in range(nstruct):
     slen=structures[1][i]
     print '= = Debug:', x_init, stype, slen
     if stype=='C':
-        draw_coil(fp, x_init, length=width*slen, thickness=th)
+        draw_coil(fp, x_init, length=width*slen, thickness=th, linewidth=lw )
     elif stype=='G' or stype=='H' or stype=='I':
-        draw_helix(fp, x_init, width=width, nres=slen, htype=stype, thickness=th)
+        draw_helix(fp, x_init, width=width, nres=slen, htype=stype, thickness=th, linewidth=lw)
     elif stype=='E':
-        draw_sheet(fp, x_init, width, nres=slen, thickness=th)
+        draw_sheet(fp, x_init, width, nres=slen, thickness=th, linewidth=lw)
     elif stype=='T':
-        draw_turn(fp, x_init, width, nres=slen, thickness=th)
+        draw_turn(fp, x_init, width, nres=slen, thickness=th, linewidth=lw)
     elif stype=='B':
-        draw_bridge(fp, x_init, width=width, thickness=th)
+        draw_bridge(fp, x_init, width=width, thickness=th, linewidth=lw)
     elif stype=='!':
         #Assume DSSP-style chain-break
         print "= = NB: Chain break detected. Will skip."
     else:
-        draw_coil(fp, x_init, width*slen, thickness=th)
+        draw_coil(fp, x_init, width*slen, thickness=th, linewidth=lw)
     x_init[0]+=width*slen
 
 print_svgfooter(fp)
